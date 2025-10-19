@@ -5,8 +5,7 @@
  * for easy demo purposes, but simulating use in the browser.
  *
  * To run it in a browser application, copy/paste it into a frontend application,
- * remove the 'node-fetch' import, and replace `process.stdout.write` with
- * a console.log or UI display.
+ * and replace `process.stdout.write` with a console.log or UI display.
  */
 import { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
 

@@ -2,23 +2,13 @@
 
 Types:
 
-- <code><a href="./src/resources/shared.ts">AllModels</a></code>
-- <code><a href="./src/resources/shared.ts">ChatModel</a></code>
-- <code><a href="./src/resources/shared.ts">ComparisonFilter</a></code>
-- <code><a href="./src/resources/shared.ts">CompoundFilter</a></code>
-- <code><a href="./src/resources/shared.ts">CustomToolInputFormat</a></code>
 - <code><a href="./src/resources/shared.ts">ErrorObject</a></code>
 - <code><a href="./src/resources/shared.ts">FunctionDefinition</a></code>
 - <code><a href="./src/resources/shared.ts">FunctionParameters</a></code>
 - <code><a href="./src/resources/shared.ts">Metadata</a></code>
-- <code><a href="./src/resources/shared.ts">Reasoning</a></code>
-- <code><a href="./src/resources/shared.ts">ReasoningEffort</a></code>
 - <code><a href="./src/resources/shared.ts">ResponseFormatJSONObject</a></code>
 - <code><a href="./src/resources/shared.ts">ResponseFormatJSONSchema</a></code>
 - <code><a href="./src/resources/shared.ts">ResponseFormatText</a></code>
-- <code><a href="./src/resources/shared.ts">ResponseFormatTextGrammar</a></code>
-- <code><a href="./src/resources/shared.ts">ResponseFormatTextPython</a></code>
-- <code><a href="./src/resources/shared.ts">ResponsesModel</a></code>
 
 # Completions
 
@@ -43,7 +33,6 @@ Types:
 Types:
 
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletion</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionAllowedToolChoice</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionAssistantMessageParam</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionAudio</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionAudioParam</a></code>
@@ -53,21 +42,17 @@ Types:
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionContentPartInputAudio</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionContentPartRefusal</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionContentPartText</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionCustomTool</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionDeleted</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionDeveloperMessageParam</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionFunctionCallOption</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionFunctionMessageParam</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionFunctionTool</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionMessage</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionMessageCustomToolCall</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionMessageFunctionToolCall</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionMessageParam</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionMessageToolCall</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionModality</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionNamedToolChoice</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionNamedToolChoiceCustom</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionPredictionContent</a></code>
+- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionReasoningEffort</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionRole</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionStoreMessage</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionStreamOptions</a></code>
@@ -77,8 +62,6 @@ Types:
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionToolChoiceOption</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionToolMessageParam</a></code>
 - <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionUserMessageParam</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionAllowedTools</a></code>
-- <code><a href="./src/resources/chat/completions/completions.ts">ChatCompletionReasoningEffort</a></code>
 
 Methods:
 
@@ -129,12 +112,6 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/images.ts">Image</a></code>
-- <code><a href="./src/resources/images.ts">ImageEditCompletedEvent</a></code>
-- <code><a href="./src/resources/images.ts">ImageEditPartialImageEvent</a></code>
-- <code><a href="./src/resources/images.ts">ImageEditStreamEvent</a></code>
-- <code><a href="./src/resources/images.ts">ImageGenCompletedEvent</a></code>
-- <code><a href="./src/resources/images.ts">ImageGenPartialImageEvent</a></code>
-- <code><a href="./src/resources/images.ts">ImageGenStreamEvent</a></code>
 - <code><a href="./src/resources/images.ts">ImageModel</a></code>
 - <code><a href="./src/resources/images.ts">ImagesResponse</a></code>
 
@@ -156,14 +133,7 @@ Types:
 Types:
 
 - <code><a href="./src/resources/audio/transcriptions.ts">Transcription</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionDiarized</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionDiarizedSegment</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionInclude</a></code>
 - <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionSegment</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionStreamEvent</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionTextDeltaEvent</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionTextDoneEvent</a></code>
-- <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionTextSegmentEvent</a></code>
 - <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionVerbose</a></code>
 - <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionWord</a></code>
 - <code><a href="./src/resources/audio/transcriptions.ts">TranscriptionCreateResponse</a></code>
@@ -224,26 +194,15 @@ Methods:
 
 # FineTuning
 
-## Methods
-
-Types:
-
-- <code><a href="./src/resources/fine-tuning/methods.ts">DpoHyperparameters</a></code>
-- <code><a href="./src/resources/fine-tuning/methods.ts">DpoMethod</a></code>
-- <code><a href="./src/resources/fine-tuning/methods.ts">ReinforcementHyperparameters</a></code>
-- <code><a href="./src/resources/fine-tuning/methods.ts">ReinforcementMethod</a></code>
-- <code><a href="./src/resources/fine-tuning/methods.ts">SupervisedHyperparameters</a></code>
-- <code><a href="./src/resources/fine-tuning/methods.ts">SupervisedMethod</a></code>
-
 ## Jobs
 
 Types:
 
 - <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJob</a></code>
 - <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJobEvent</a></code>
+- <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJobIntegration</a></code>
 - <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJobWandbIntegration</a></code>
 - <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJobWandbIntegrationObject</a></code>
-- <code><a href="./src/resources/fine-tuning/jobs/jobs.ts">FineTuningJobIntegration</a></code>
 
 Methods:
 
@@ -252,8 +211,6 @@ Methods:
 - <code title="get /fine_tuning/jobs">client.fineTuning.jobs.<a href="./src/resources/fine-tuning/jobs/jobs.ts">list</a>({ ...params }) -> FineTuningJobsPage</code>
 - <code title="post /fine_tuning/jobs/{fine_tuning_job_id}/cancel">client.fineTuning.jobs.<a href="./src/resources/fine-tuning/jobs/jobs.ts">cancel</a>(fineTuningJobID) -> FineTuningJob</code>
 - <code title="get /fine_tuning/jobs/{fine_tuning_job_id}/events">client.fineTuning.jobs.<a href="./src/resources/fine-tuning/jobs/jobs.ts">listEvents</a>(fineTuningJobID, { ...params }) -> FineTuningJobEventsPage</code>
-- <code title="post /fine_tuning/jobs/{fine_tuning_job_id}/pause">client.fineTuning.jobs.<a href="./src/resources/fine-tuning/jobs/jobs.ts">pause</a>(fineTuningJobID) -> FineTuningJob</code>
-- <code title="post /fine_tuning/jobs/{fine_tuning_job_id}/resume">client.fineTuning.jobs.<a href="./src/resources/fine-tuning/jobs/jobs.ts">resume</a>(fineTuningJobID) -> FineTuningJob</code>
 
 ### Checkpoints
 
@@ -264,137 +221,6 @@ Types:
 Methods:
 
 - <code title="get /fine_tuning/jobs/{fine_tuning_job_id}/checkpoints">client.fineTuning.jobs.checkpoints.<a href="./src/resources/fine-tuning/jobs/checkpoints.ts">list</a>(fineTuningJobID, { ...params }) -> FineTuningJobCheckpointsPage</code>
-
-## Checkpoints
-
-### Permissions
-
-Types:
-
-- <code><a href="./src/resources/fine-tuning/checkpoints/permissions.ts">PermissionCreateResponse</a></code>
-- <code><a href="./src/resources/fine-tuning/checkpoints/permissions.ts">PermissionRetrieveResponse</a></code>
-- <code><a href="./src/resources/fine-tuning/checkpoints/permissions.ts">PermissionDeleteResponse</a></code>
-
-Methods:
-
-- <code title="post /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions">client.fineTuning.checkpoints.permissions.<a href="./src/resources/fine-tuning/checkpoints/permissions.ts">create</a>(fineTunedModelCheckpoint, { ...params }) -> PermissionCreateResponsesPage</code>
-- <code title="get /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions">client.fineTuning.checkpoints.permissions.<a href="./src/resources/fine-tuning/checkpoints/permissions.ts">retrieve</a>(fineTunedModelCheckpoint, { ...params }) -> PermissionRetrieveResponse</code>
-- <code title="delete /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions/{permission_id}">client.fineTuning.checkpoints.permissions.<a href="./src/resources/fine-tuning/checkpoints/permissions.ts">delete</a>(permissionID, { ...params }) -> PermissionDeleteResponse</code>
-
-## Alpha
-
-### Graders
-
-Types:
-
-- <code><a href="./src/resources/fine-tuning/alpha/graders.ts">GraderRunResponse</a></code>
-- <code><a href="./src/resources/fine-tuning/alpha/graders.ts">GraderValidateResponse</a></code>
-
-Methods:
-
-- <code title="post /fine_tuning/alpha/graders/run">client.fineTuning.alpha.graders.<a href="./src/resources/fine-tuning/alpha/graders.ts">run</a>({ ...params }) -> GraderRunResponse</code>
-- <code title="post /fine_tuning/alpha/graders/validate">client.fineTuning.alpha.graders.<a href="./src/resources/fine-tuning/alpha/graders.ts">validate</a>({ ...params }) -> GraderValidateResponse</code>
-
-# Graders
-
-## GraderModels
-
-Types:
-
-- <code><a href="./src/resources/graders/grader-models.ts">LabelModelGrader</a></code>
-- <code><a href="./src/resources/graders/grader-models.ts">MultiGrader</a></code>
-- <code><a href="./src/resources/graders/grader-models.ts">PythonGrader</a></code>
-- <code><a href="./src/resources/graders/grader-models.ts">ScoreModelGrader</a></code>
-- <code><a href="./src/resources/graders/grader-models.ts">StringCheckGrader</a></code>
-- <code><a href="./src/resources/graders/grader-models.ts">TextSimilarityGrader</a></code>
-
-# VectorStores
-
-Types:
-
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">AutoFileChunkingStrategyParam</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">FileChunkingStrategy</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">FileChunkingStrategyParam</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">OtherFileChunkingStrategyObject</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">StaticFileChunkingStrategy</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">StaticFileChunkingStrategyObject</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">StaticFileChunkingStrategyObjectParam</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">VectorStore</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">VectorStoreDeleted</a></code>
-- <code><a href="./src/resources/vector-stores/vector-stores.ts">VectorStoreSearchResponse</a></code>
-
-Methods:
-
-- <code title="post /vector_stores">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">create</a>({ ...params }) -> VectorStore</code>
-- <code title="get /vector_stores/{vector_store_id}">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">retrieve</a>(vectorStoreID) -> VectorStore</code>
-- <code title="post /vector_stores/{vector_store_id}">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">update</a>(vectorStoreID, { ...params }) -> VectorStore</code>
-- <code title="get /vector_stores">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">list</a>({ ...params }) -> VectorStoresPage</code>
-- <code title="delete /vector_stores/{vector_store_id}">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">delete</a>(vectorStoreID) -> VectorStoreDeleted</code>
-- <code title="post /vector_stores/{vector_store_id}/search">client.vectorStores.<a href="./src/resources/vector-stores/vector-stores.ts">search</a>(vectorStoreID, { ...params }) -> VectorStoreSearchResponsesPage</code>
-
-## Files
-
-Types:
-
-- <code><a href="./src/resources/vector-stores/files.ts">VectorStoreFile</a></code>
-- <code><a href="./src/resources/vector-stores/files.ts">VectorStoreFileDeleted</a></code>
-- <code><a href="./src/resources/vector-stores/files.ts">FileContentResponse</a></code>
-
-Methods:
-
-- <code title="post /vector_stores/{vector_store_id}/files">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">create</a>(vectorStoreId, { ...params }) -> VectorStoreFile</code>
-- <code title="get /vector_stores/{vector_store_id}/files/{file_id}">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">retrieve</a>(vectorStoreId, fileId) -> VectorStoreFile</code>
-- <code title="post /vector_stores/{vector_store_id}/files/{file_id}">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">update</a>(vectorStoreId, fileId, { ...params }) -> VectorStoreFile</code>
-- <code title="get /vector_stores/{vector_store_id}/files">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">list</a>(vectorStoreId, { ...params }) -> VectorStoreFilesPage</code>
-- <code title="delete /vector_stores/{vector_store_id}/files/{file_id}">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">del</a>(vectorStoreId, fileId) -> VectorStoreFileDeleted</code>
-- <code title="get /vector_stores/{vector_store_id}/files/{file_id}/content">client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">content</a>(vectorStoreId, fileId) -> FileContentResponsesPage</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">createAndPoll</a>(vectorStoreId, body, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">poll</a>(vectorStoreId, fileId, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">upload</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">uploadAndPoll</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-
-## FileBatches
-
-Types:
-
-- <code><a href="./src/resources/vector-stores/file-batches.ts">VectorStoreFileBatch</a></code>
-
-Methods:
-
-- <code title="post /vector_stores/{vector_store_id}/file_batches">client.vectorStores.fileBatches.<a href="./src/resources/vector-stores/file-batches.ts">create</a>(vectorStoreID, { ...params }) -> VectorStoreFileBatch</code>
-- <code title="get /vector_stores/{vector_store_id}/file_batches/{batch_id}">client.vectorStores.fileBatches.<a href="./src/resources/vector-stores/file-batches.ts">retrieve</a>(batchID, { ...params }) -> VectorStoreFileBatch</code>
-- <code title="post /vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel">client.vectorStores.fileBatches.<a href="./src/resources/vector-stores/file-batches.ts">cancel</a>(batchID, { ...params }) -> VectorStoreFileBatch</code>
-- <code title="get /vector_stores/{vector_store_id}/file_batches/{batch_id}/files">client.vectorStores.fileBatches.<a href="./src/resources/vector-stores/file-batches.ts">listFiles</a>(batchID, { ...params }) -> VectorStoreFilesPage</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">createAndPoll</a>(vectorStoreId, body, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">poll</a>(vectorStoreId, fileId, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">upload</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-- <code>client.vectorStores.files.<a href="./src/resources/vector-stores/files.ts">uploadAndPoll</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
-
-# Webhooks
-
-Types:
-
-- <code><a href="./src/resources/webhooks.ts">BatchCancelledWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">BatchCompletedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">BatchExpiredWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">BatchFailedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">EvalRunCanceledWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">EvalRunFailedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">EvalRunSucceededWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">FineTuningJobCancelledWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">FineTuningJobFailedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">FineTuningJobSucceededWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">RealtimeCallIncomingWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">ResponseCancelledWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">ResponseCompletedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">ResponseFailedWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">ResponseIncompleteWebhookEvent</a></code>
-- <code><a href="./src/resources/webhooks.ts">UnwrapWebhookEvent</a></code>
-
-Methods:
-
-- <code>client.webhooks.<a href="./src/resources/webhooks.ts">unwrap</a>(payload, headers, secret?, tolerance?) -> UnwrapWebhookEvent</code>
-- <code>client.webhooks.<a href="./src/resources/webhooks.ts">verifySignature</a>(payload, headers, secret?, tolerance?) -> void</code>
 
 # Beta
 
@@ -410,9 +236,7 @@ Types:
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemDeleteEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemDeletedEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemInputAudioTranscriptionCompletedEvent</a></code>
-- <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemInputAudioTranscriptionDeltaEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemInputAudioTranscriptionFailedEvent</a></code>
-- <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemRetrieveEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemTruncateEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemTruncatedEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">ConversationItemWithReference</a></code>
@@ -449,8 +273,6 @@ Types:
 - <code><a href="./src/resources/beta/realtime/realtime.ts">SessionCreatedEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">SessionUpdateEvent</a></code>
 - <code><a href="./src/resources/beta/realtime/realtime.ts">SessionUpdatedEvent</a></code>
-- <code><a href="./src/resources/beta/realtime/realtime.ts">TranscriptionSessionUpdate</a></code>
-- <code><a href="./src/resources/beta/realtime/realtime.ts">TranscriptionSessionUpdatedEvent</a></code>
 
 ### Sessions
 
@@ -463,58 +285,70 @@ Methods:
 
 - <code title="post /realtime/sessions">client.beta.realtime.sessions.<a href="./src/resources/beta/realtime/sessions.ts">create</a>({ ...params }) -> SessionCreateResponse</code>
 
-### TranscriptionSessions
+## VectorStores
 
 Types:
 
-- <code><a href="./src/resources/beta/realtime/transcription-sessions.ts">TranscriptionSession</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">AutoFileChunkingStrategyParam</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">FileChunkingStrategy</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">FileChunkingStrategyParam</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">OtherFileChunkingStrategyObject</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">StaticFileChunkingStrategy</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">StaticFileChunkingStrategyObject</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">StaticFileChunkingStrategyObjectParam</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">VectorStore</a></code>
+- <code><a href="./src/resources/beta/vector-stores/vector-stores.ts">VectorStoreDeleted</a></code>
 
 Methods:
 
-- <code title="post /realtime/transcription_sessions">client.beta.realtime.transcriptionSessions.<a href="./src/resources/beta/realtime/transcription-sessions.ts">create</a>({ ...params }) -> TranscriptionSession</code>
-## ChatKit
+- <code title="post /vector_stores">client.beta.vectorStores.<a href="./src/resources/beta/vector-stores/vector-stores.ts">create</a>({ ...params }) -> VectorStore</code>
+- <code title="get /vector_stores/{vector_store_id}">client.beta.vectorStores.<a href="./src/resources/beta/vector-stores/vector-stores.ts">retrieve</a>(vectorStoreID) -> VectorStore</code>
+- <code title="post /vector_stores/{vector_store_id}">client.beta.vectorStores.<a href="./src/resources/beta/vector-stores/vector-stores.ts">update</a>(vectorStoreID, { ...params }) -> VectorStore</code>
+- <code title="get /vector_stores">client.beta.vectorStores.<a href="./src/resources/beta/vector-stores/vector-stores.ts">list</a>({ ...params }) -> VectorStoresPage</code>
+- <code title="delete /vector_stores/{vector_store_id}">client.beta.vectorStores.<a href="./src/resources/beta/vector-stores/vector-stores.ts">delete</a>(vectorStoreID) -> VectorStoreDeleted</code>
+
+### Files
 
 Types:
 
-- <code><a href="./src/resources/beta/chatkit/chatkit.ts">ChatKitWorkflow</a></code>
-
-### Sessions
+- <code><a href="./src/resources/beta/vector-stores/files.ts">VectorStoreFile</a></code>
+- <code><a href="./src/resources/beta/vector-stores/files.ts">VectorStoreFileDeleted</a></code>
 
 Methods:
 
-- <code title="post /chatkit/sessions">client.beta.chatkit.sessions.<a href="./src/resources/beta/chatkit/sessions.ts">create</a>({ ...params }) -> ChatSession</code>
-- <code title="post /chatkit/sessions/{session_id}/cancel">client.beta.chatkit.sessions.<a href="./src/resources/beta/chatkit/sessions.ts">cancel</a>(sessionID) -> ChatSession</code>
+- <code title="post /vector_stores/{vector_store_id}/files">client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">create</a>(vectorStoreID, { ...params }) -> VectorStoreFile</code>
+- <code title="get /vector_stores/{vector_store_id}/files/{file_id}">client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">retrieve</a>(fileID, { ...params }) -> VectorStoreFile</code>
+- <code title="get /vector_stores/{vector_store_id}/files">client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">list</a>(vectorStoreID, { ...params }) -> VectorStoreFilesPage</code>
+- <code title="delete /vector_stores/{vector_store_id}/files/{file_id}">client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">delete</a>(fileID, { ...params }) -> VectorStoreFileDeleted</code>
+- <code>client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">createAndPoll</a>(vectorStoreId, body, options?) -> Promise&lt;VectorStoreFile&gt;</code>
+- <code>client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">poll</a>(vectorStoreId, fileId, options?) -> Promise&lt;VectorStoreFile&gt;</code>
+- <code>client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">upload</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
+- <code>client.beta.vectorStores.files.<a href="./src/resources/beta/vector-stores/files.ts">uploadAndPoll</a>(vectorStoreId, file, options?) -> Promise&lt;VectorStoreFile&gt;</code>
 
-### Threads
+### FileBatches
 
 Types:
 
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSession</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionAutomaticThreadTitling</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionChatKitConfiguration</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionChatKitConfigurationParam</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionExpiresAfterParam</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionFileUpload</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionHistory</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionRateLimits</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionRateLimitsParam</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionStatus</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatSessionWorkflowParam</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitAttachment</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitResponseOutputText</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitThread</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitThreadAssistantMessageItem</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitThreadItemList</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitThreadUserMessageItem</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ChatKitWidgetItem</a></code>
-- <code><a href="./src/resources/beta/chatkit/threads.ts">ThreadDeleteResponse</a></code>
+- <code><a href="./src/resources/beta/vector-stores/file-batches.ts">VectorStoreFileBatch</a></code>
 
 Methods:
 
-- <code title="get /chatkit/threads/{thread_id}">client.beta.chatkit.threads.<a href="./src/resources/beta/chatkit/threads.ts">retrieve</a>(threadID) -> ChatKitThread</code>
-- <code title="get /chatkit/threads">client.beta.chatkit.threads.<a href="./src/resources/beta/chatkit/threads.ts">list</a>({ ...params }) -> ChatKitThreadsPage</code>
-- <code title="delete /chatkit/threads/{thread_id}">client.beta.chatkit.threads.<a href="./src/resources/beta/chatkit/threads.ts">delete</a>(threadID) -> ThreadDeleteResponse</code>
-- <code title="get /chatkit/threads/{thread_id}/items">client.beta.chatkit.threads.<a href="./src/resources/beta/chatkit/threads.ts">listItems</a>(threadID, { ...params }) -> ChatKitThreadItemListDataPage</code>
+- <code title="post /vector_stores/{vector_store_id}/file_batches">client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">create</a>(vectorStoreID, { ...params }) -> VectorStoreFileBatch</code>
+- <code title="get /vector_stores/{vector_store_id}/file_batches/{batch_id}">client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">retrieve</a>(batchID, { ...params }) -> VectorStoreFileBatch</code>
+- <code title="post /vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel">client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">cancel</a>(batchID, { ...params }) -> VectorStoreFileBatch</code>
+- <code title="get /vector_stores/{vector_store_id}/file_batches/{batch_id}/files">client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">listFiles</a>(batchID, { ...params }) -> VectorStoreFilesPage</code>
+- <code>client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">createAndPoll</a>(vectorStoreId, body, options?) -> Promise&lt;VectorStoreFileBatch&gt;</code>
+- <code>client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">poll</a>(vectorStoreId, batchId, options?) -> Promise&lt;VectorStoreFileBatch&gt;</code>
+- <code>client.beta.vectorStores.fileBatches.<a href="./src/resources/beta/vector-stores/file-batches.ts">uploadAndPoll</a>(vectorStoreId, { files, fileIds = [] }, options?) -> Promise&lt;VectorStoreFileBatch&gt;</code>
+
+## Chat
+
+### Completions
+
+Methods:
+
+- <code>client.beta.chat.completions.<a href="./src/resources/beta/chat/completions.ts">runTools</a>(body, options?) -> ChatCompletionRunner | ChatCompletionStreamingRunner</code>
+- <code>client.beta.chat.completions.<a href="./src/resources/beta/chat/completions.ts">stream</a>(body, options?) -> ChatCompletionStream</code>
 
 ## Assistants
 
@@ -660,7 +494,6 @@ Types:
 - <code><a href="./src/resources/batches.ts">Batch</a></code>
 - <code><a href="./src/resources/batches.ts">BatchError</a></code>
 - <code><a href="./src/resources/batches.ts">BatchRequestCounts</a></code>
-- <code><a href="./src/resources/batches.ts">BatchUsage</a></code>
 
 Methods:
 
@@ -690,411 +523,3 @@ Types:
 Methods:
 
 - <code title="post /uploads/{upload_id}/parts">client.uploads.parts.<a href="./src/resources/uploads/parts.ts">create</a>(uploadID, { ...params }) -> UploadPart</code>
-
-# Responses
-
-Types:
-
-- <code><a href="./src/resources/responses/responses.ts">ComputerTool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">CustomTool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">EasyInputMessage</a></code>
-- <code><a href="./src/resources/responses/responses.ts">FileSearchTool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">FunctionTool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">Response</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseAudioDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseAudioDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseAudioTranscriptDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseAudioTranscriptDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterCallCodeDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterCallCodeDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterCallCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterCallInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterCallInterpretingEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCodeInterpreterToolCall</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseComputerToolCall</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseComputerToolCallOutputItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseComputerToolCallOutputScreenshot</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseContent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseContentPartAddedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseContentPartDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseConversationParam</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCreatedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCustomToolCall</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCustomToolCallInputDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCustomToolCallInputDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseCustomToolCallOutput</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseError</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseErrorEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFailedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFileSearchCallCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFileSearchCallInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFileSearchCallSearchingEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFileSearchToolCall</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFormatTextConfig</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFormatTextJSONSchemaConfig</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionCallArgumentsDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionCallArgumentsDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionCallOutputItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionCallOutputItemList</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionToolCall</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionToolCallItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionToolCallOutputItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseFunctionWebSearch</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseImageGenCallCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseImageGenCallGeneratingEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseImageGenCallInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseImageGenCallPartialImageEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseIncludable</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseIncompleteEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInput</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputAudio</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputContent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputFile</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputFileContent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputImage</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputImageContent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputMessageContentList</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputMessageItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputText</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseInputTextContent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpCallArgumentsDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpCallArgumentsDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpCallCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpCallFailedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpCallInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpListToolsCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpListToolsFailedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseMcpListToolsInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputAudio</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputItemAddedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputItemDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputMessage</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputRefusal</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputText</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseOutputTextAnnotationAddedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponsePrompt</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseQueuedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningItem</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningSummaryPartAddedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningSummaryPartDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningSummaryTextDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningSummaryTextDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningTextDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseReasoningTextDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseRefusalDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseRefusalDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseStatus</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseStreamEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseTextConfig</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseTextDeltaEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseTextDoneEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseUsage</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseWebSearchCallCompletedEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseWebSearchCallInProgressEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ResponseWebSearchCallSearchingEvent</a></code>
-- <code><a href="./src/resources/responses/responses.ts">Tool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceAllowed</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceCustom</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceFunction</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceMcp</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceOptions</a></code>
-- <code><a href="./src/resources/responses/responses.ts">ToolChoiceTypes</a></code>
-- <code><a href="./src/resources/responses/responses.ts">WebSearchPreviewTool</a></code>
-- <code><a href="./src/resources/responses/responses.ts">WebSearchTool</a></code>
-
-Methods:
-
-- <code title="post /responses">client.responses.<a href="./src/resources/responses/responses.ts">create</a>({ ...params }) -> Response</code>
-- <code title="get /responses/{response_id}">client.responses.<a href="./src/resources/responses/responses.ts">retrieve</a>(responseID, { ...params }) -> Response</code>
-- <code title="delete /responses/{response_id}">client.responses.<a href="./src/resources/responses/responses.ts">delete</a>(responseID) -> void</code>
-- <code title="post /responses/{response_id}/cancel">client.responses.<a href="./src/resources/responses/responses.ts">cancel</a>(responseID) -> Response</code>
-
-## InputItems
-
-Types:
-
-- <code><a href="./src/resources/responses/input-items.ts">ResponseItemList</a></code>
-
-Methods:
-
-- <code title="get /responses/{response_id}/input_items">client.responses.inputItems.<a href="./src/resources/responses/input-items.ts">list</a>(responseID, { ...params }) -> ResponseItemsPage</code>
-
-# Realtime
-
-Types:
-
-- <code><a href="./src/resources/realtime/realtime.ts">AudioTranscription</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationCreatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItem</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemAdded</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemCreateEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemCreatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemDeleteEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemDeletedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemDone</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemInputAudioTranscriptionCompletedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemInputAudioTranscriptionDeltaEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemInputAudioTranscriptionFailedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemInputAudioTranscriptionSegment</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemRetrieveEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemTruncateEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemTruncatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ConversationItemWithReference</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferAppendEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferClearEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferClearedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferCommitEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferCommittedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferSpeechStartedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferSpeechStoppedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">InputAudioBufferTimeoutTriggered</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">LogProbProperties</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">McpListToolsCompleted</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">McpListToolsFailed</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">McpListToolsInProgress</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">NoiseReductionType</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">OutputAudioBufferClearEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RateLimitsUpdatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeAudioConfig</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeAudioConfigInput</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeAudioConfigOutput</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeAudioFormats</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeAudioInputTurnDetection</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeClientEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeConversationItemAssistantMessage</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeConversationItemFunctionCall</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeConversationItemFunctionCallOutput</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeConversationItemSystemMessage</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeConversationItemUserMessage</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeError</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeErrorEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeFunctionTool</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpApprovalRequest</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpApprovalResponse</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpListTools</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpProtocolError</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpToolCall</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcpToolExecutionError</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeMcphttpError</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponse</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseCreateAudioOutput</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseCreateMcpTool</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseCreateParams</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseStatus</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseUsage</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseUsageInputTokenDetails</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeResponseUsageOutputTokenDetails</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeServerEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeSession</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeSessionCreateRequest</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeToolChoiceConfig</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeToolsConfig</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeToolsConfigUnion</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTracingConfig</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTranscriptionSessionAudio</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTranscriptionSessionAudioInput</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTranscriptionSessionAudioInputTurnDetection</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTranscriptionSessionCreateRequest</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTruncation</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">RealtimeTruncationRetentionRatio</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseAudioDeltaEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseAudioDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseAudioTranscriptDeltaEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseAudioTranscriptDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseCancelEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseContentPartAddedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseContentPartDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseCreateEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseCreatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseFunctionCallArgumentsDeltaEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseFunctionCallArgumentsDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseMcpCallArgumentsDelta</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseMcpCallArgumentsDone</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseMcpCallCompleted</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseMcpCallFailed</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseMcpCallInProgress</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseOutputItemAddedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseOutputItemDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseTextDeltaEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">ResponseTextDoneEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">SessionCreatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">SessionUpdateEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">SessionUpdatedEvent</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">TranscriptionSessionUpdate</a></code>
-- <code><a href="./src/resources/realtime/realtime.ts">TranscriptionSessionUpdatedEvent</a></code>
-
-## ClientSecrets
-
-Types:
-
-- <code><a href="./src/resources/realtime/client-secrets.ts">RealtimeSessionClientSecret</a></code>
-- <code><a href="./src/resources/realtime/client-secrets.ts">RealtimeSessionCreateResponse</a></code>
-- <code><a href="./src/resources/realtime/client-secrets.ts">RealtimeTranscriptionSessionCreateResponse</a></code>
-- <code><a href="./src/resources/realtime/client-secrets.ts">RealtimeTranscriptionSessionTurnDetection</a></code>
-- <code><a href="./src/resources/realtime/client-secrets.ts">ClientSecretCreateResponse</a></code>
-
-Methods:
-
-- <code title="post /realtime/client_secrets">client.realtime.clientSecrets.<a href="./src/resources/realtime/client-secrets.ts">create</a>({ ...params }) -> ClientSecretCreateResponse</code>
-
-## Calls
-
-Methods:
-
-- <code title="post /realtime/calls/{call_id}/accept">client.realtime.calls.<a href="./src/resources/realtime/calls.ts">accept</a>(callID, { ...params }) -> void</code>
-- <code title="post /realtime/calls/{call_id}/hangup">client.realtime.calls.<a href="./src/resources/realtime/calls.ts">hangup</a>(callID) -> void</code>
-- <code title="post /realtime/calls/{call_id}/refer">client.realtime.calls.<a href="./src/resources/realtime/calls.ts">refer</a>(callID, { ...params }) -> void</code>
-- <code title="post /realtime/calls/{call_id}/reject">client.realtime.calls.<a href="./src/resources/realtime/calls.ts">reject</a>(callID, { ...params }) -> void</code>
-
-# Conversations
-
-Types:
-
-- <code><a href="./src/resources/conversations/conversations.ts">ComputerScreenshotContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">Conversation</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">ConversationDeleted</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">ConversationDeletedResource</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">Message</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">SummaryTextContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">TextContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">InputTextContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">OutputTextContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">RefusalContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">InputImageContent</a></code>
-- <code><a href="./src/resources/conversations/conversations.ts">InputFileContent</a></code>
-
-Methods:
-
-- <code title="post /conversations">client.conversations.<a href="./src/resources/conversations/conversations.ts">create</a>({ ...params }) -> Conversation</code>
-- <code title="get /conversations/{conversation_id}">client.conversations.<a href="./src/resources/conversations/conversations.ts">retrieve</a>(conversationID) -> Conversation</code>
-- <code title="post /conversations/{conversation_id}">client.conversations.<a href="./src/resources/conversations/conversations.ts">update</a>(conversationID, { ...params }) -> Conversation</code>
-- <code title="delete /conversations/{conversation_id}">client.conversations.<a href="./src/resources/conversations/conversations.ts">delete</a>(conversationID) -> ConversationDeletedResource</code>
-
-## Items
-
-Types:
-
-- <code><a href="./src/resources/conversations/items.ts">ConversationItem</a></code>
-- <code><a href="./src/resources/conversations/items.ts">ConversationItemList</a></code>
-
-Methods:
-
-- <code title="post /conversations/{conversation_id}/items">client.conversations.items.<a href="./src/resources/conversations/items.ts">create</a>(conversationID, { ...params }) -> ConversationItemList</code>
-- <code title="get /conversations/{conversation_id}/items/{item_id}">client.conversations.items.<a href="./src/resources/conversations/items.ts">retrieve</a>(itemID, { ...params }) -> ConversationItem</code>
-- <code title="get /conversations/{conversation_id}/items">client.conversations.items.<a href="./src/resources/conversations/items.ts">list</a>(conversationID, { ...params }) -> ConversationItemsPage</code>
-- <code title="delete /conversations/{conversation_id}/items/{item_id}">client.conversations.items.<a href="./src/resources/conversations/items.ts">delete</a>(itemID, { ...params }) -> Conversation</code>
-
-# Evals
-
-Types:
-
-- <code><a href="./src/resources/evals/evals.ts">EvalCustomDataSourceConfig</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalStoredCompletionsDataSourceConfig</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalCreateResponse</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalRetrieveResponse</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalUpdateResponse</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalListResponse</a></code>
-- <code><a href="./src/resources/evals/evals.ts">EvalDeleteResponse</a></code>
-
-Methods:
-
-- <code title="post /evals">client.evals.<a href="./src/resources/evals/evals.ts">create</a>({ ...params }) -> EvalCreateResponse</code>
-- <code title="get /evals/{eval_id}">client.evals.<a href="./src/resources/evals/evals.ts">retrieve</a>(evalID) -> EvalRetrieveResponse</code>
-- <code title="post /evals/{eval_id}">client.evals.<a href="./src/resources/evals/evals.ts">update</a>(evalID, { ...params }) -> EvalUpdateResponse</code>
-- <code title="get /evals">client.evals.<a href="./src/resources/evals/evals.ts">list</a>({ ...params }) -> EvalListResponsesPage</code>
-- <code title="delete /evals/{eval_id}">client.evals.<a href="./src/resources/evals/evals.ts">delete</a>(evalID) -> EvalDeleteResponse</code>
-
-## Runs
-
-Types:
-
-- <code><a href="./src/resources/evals/runs/runs.ts">CreateEvalCompletionsRunDataSource</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">CreateEvalJSONLRunDataSource</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">EvalAPIError</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">RunCreateResponse</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">RunRetrieveResponse</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">RunListResponse</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">RunDeleteResponse</a></code>
-- <code><a href="./src/resources/evals/runs/runs.ts">RunCancelResponse</a></code>
-
-Methods:
-
-- <code title="post /evals/{eval_id}/runs">client.evals.runs.<a href="./src/resources/evals/runs/runs.ts">create</a>(evalID, { ...params }) -> RunCreateResponse</code>
-- <code title="get /evals/{eval_id}/runs/{run_id}">client.evals.runs.<a href="./src/resources/evals/runs/runs.ts">retrieve</a>(runID, { ...params }) -> RunRetrieveResponse</code>
-- <code title="get /evals/{eval_id}/runs">client.evals.runs.<a href="./src/resources/evals/runs/runs.ts">list</a>(evalID, { ...params }) -> RunListResponsesPage</code>
-- <code title="delete /evals/{eval_id}/runs/{run_id}">client.evals.runs.<a href="./src/resources/evals/runs/runs.ts">delete</a>(runID, { ...params }) -> RunDeleteResponse</code>
-- <code title="post /evals/{eval_id}/runs/{run_id}">client.evals.runs.<a href="./src/resources/evals/runs/runs.ts">cancel</a>(runID, { ...params }) -> RunCancelResponse</code>
-
-### OutputItems
-
-Types:
-
-- <code><a href="./src/resources/evals/runs/output-items.ts">OutputItemRetrieveResponse</a></code>
-- <code><a href="./src/resources/evals/runs/output-items.ts">OutputItemListResponse</a></code>
-
-Methods:
-
-- <code title="get /evals/{eval_id}/runs/{run_id}/output_items/{output_item_id}">client.evals.runs.outputItems.<a href="./src/resources/evals/runs/output-items.ts">retrieve</a>(outputItemID, { ...params }) -> OutputItemRetrieveResponse</code>
-- <code title="get /evals/{eval_id}/runs/{run_id}/output_items">client.evals.runs.outputItems.<a href="./src/resources/evals/runs/output-items.ts">list</a>(runID, { ...params }) -> OutputItemListResponsesPage</code>
-
-# Containers
-
-Types:
-
-- <code><a href="./src/resources/containers/containers.ts">ContainerCreateResponse</a></code>
-- <code><a href="./src/resources/containers/containers.ts">ContainerRetrieveResponse</a></code>
-- <code><a href="./src/resources/containers/containers.ts">ContainerListResponse</a></code>
-
-Methods:
-
-- <code title="post /containers">client.containers.<a href="./src/resources/containers/containers.ts">create</a>({ ...params }) -> ContainerCreateResponse</code>
-- <code title="get /containers/{container_id}">client.containers.<a href="./src/resources/containers/containers.ts">retrieve</a>(containerID) -> ContainerRetrieveResponse</code>
-- <code title="get /containers">client.containers.<a href="./src/resources/containers/containers.ts">list</a>({ ...params }) -> ContainerListResponsesPage</code>
-- <code title="delete /containers/{container_id}">client.containers.<a href="./src/resources/containers/containers.ts">delete</a>(containerID) -> void</code>
-
-## Files
-
-Types:
-
-- <code><a href="./src/resources/containers/files/files.ts">FileCreateResponse</a></code>
-- <code><a href="./src/resources/containers/files/files.ts">FileRetrieveResponse</a></code>
-- <code><a href="./src/resources/containers/files/files.ts">FileListResponse</a></code>
-
-Methods:
-
-- <code title="post /containers/{container_id}/files">client.containers.files.<a href="./src/resources/containers/files/files.ts">create</a>(containerID, { ...params }) -> FileCreateResponse</code>
-- <code title="get /containers/{container_id}/files/{file_id}">client.containers.files.<a href="./src/resources/containers/files/files.ts">retrieve</a>(fileID, { ...params }) -> FileRetrieveResponse</code>
-- <code title="get /containers/{container_id}/files">client.containers.files.<a href="./src/resources/containers/files/files.ts">list</a>(containerID, { ...params }) -> FileListResponsesPage</code>
-- <code title="delete /containers/{container_id}/files/{file_id}">client.containers.files.<a href="./src/resources/containers/files/files.ts">delete</a>(fileID, { ...params }) -> void</code>
-
-### Content
-
-Methods:
-
-- <code title="get /containers/{container_id}/files/{file_id}/content">client.containers.files.content.<a href="./src/resources/containers/files/content.ts">retrieve</a>(fileID, { ...params }) -> Response</code>
-
-# Videos
-
-Types:
-
-- <code><a href="./src/resources/videos.ts">Video</a></code>
-- <code><a href="./src/resources/videos.ts">VideoCreateError</a></code>
-- <code><a href="./src/resources/videos.ts">VideoModel</a></code>
-- <code><a href="./src/resources/videos.ts">VideoSeconds</a></code>
-- <code><a href="./src/resources/videos.ts">VideoSize</a></code>
-- <code><a href="./src/resources/videos.ts">VideoDeleteResponse</a></code>
-
-Methods:
-
-- <code title="post /videos">client.videos.<a href="./src/resources/videos.ts">create</a>({ ...params }) -> Video</code>
-- <code title="get /videos/{video_id}">client.videos.<a href="./src/resources/videos.ts">retrieve</a>(videoID) -> Video</code>
-- <code title="get /videos">client.videos.<a href="./src/resources/videos.ts">list</a>({ ...params }) -> VideosPage</code>
-- <code title="delete /videos/{video_id}">client.videos.<a href="./src/resources/videos.ts">delete</a>(videoID) -> VideoDeleteResponse</code>
-- <code title="get /videos/{video_id}/content">client.videos.<a href="./src/resources/videos.ts">downloadContent</a>(videoID, { ...params }) -> Response</code>
-- <code title="post /videos/{video_id}/remix">client.videos.<a href="./src/resources/videos.ts">remix</a>(videoID, { ...params }) -> Video</code>
