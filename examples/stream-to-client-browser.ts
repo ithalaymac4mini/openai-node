@@ -1,13 +1,10 @@
-#!/usr/bin/env -S npm run tsn -T
+import fetch from 'node-fetch';
+import { ChatCompletionStreamingRunner } from 'openai/lib/ChatCompletionStream';
 
 /**
- * This file is intended be run from the command-line with Node
- * for easy demo purposes, but simulating use in the browser.
- *
- * To run it in a browser application, copy/paste it into a frontend application,
- * and replace `process.stdout.write` with a console.log or UI display.
+ * This file demonstrates how to consume a new-line separated stream of chunks
+ * from a browser or another client.
  */
-import { ChatCompletionStream } from 'openai/lib/ChatCompletionStream';
 
 fetch('http://localhost:3000', {
   method: 'POST',
@@ -15,14 +12,12 @@ fetch('http://localhost:3000', {
   headers: { 'Content-Type': 'text/plain' },
 }).then(async (res) => {
   // @ts-ignore ReadableStream on different environments can be strange
-  const runner = ChatCompletionStream.fromReadableStream(res.body);
+  const stream = ChatCompletionStreamingRunner.fromReadableStream(res.body);
 
-  runner.on('content', (delta, snapshot) => {
-    process.stdout.write(delta);
-    // or, in a browser, you might display like this:
-    // document.body.innerText += delta; // or:
-    // document.body.innerText = snapshot;
-  });
+  stream.on('content', (chunk) => {
+    // document.body.innerText += chunk;
+    console.log(chunk);
+  })
 
-  console.dir(await runner.finalChatCompletion(), { depth: null });
+  console.log(await stream.finalChatCompletion());
 });

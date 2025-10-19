@@ -1,9 +1,9 @@
 import OpenAI, { APIUserAbortError, toFile } from 'openai';
 import { TranscriptionCreateParams } from 'openai/resources/audio/transcriptions';
+import fetch from 'node-fetch';
 import { File as FormDataFile, Blob as FormDataBlob } from 'formdata-node';
 import * as fs from 'fs';
 import { distance } from 'fastest-levenshtein';
-import { File } from 'node:buffer';
 
 const url = 'https://audio-samples.github.io/samples/mp3/blizzard_biased/sample-1.mp3';
 const filename = 'sample-1.mp3';
@@ -71,10 +71,10 @@ it(`streaming works`, async function () {
 it(`ChatCompletionStream works`, async function () {
   const chunks: OpenAI.Chat.ChatCompletionChunk[] = [];
   const contents: [string, string][] = [];
-  const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [];
+  const messages: OpenAI.Chat.ChatCompletionMessage[] = [];
   const chatCompletions: OpenAI.Chat.ChatCompletion[] = [];
   let finalContent: string | undefined;
-  let finalMessage: OpenAI.Chat.ChatCompletionMessageParam | undefined;
+  let finalMessage: OpenAI.Chat.ChatCompletionMessage | undefined;
   let finalChatCompletion: OpenAI.Chat.ChatCompletion | undefined;
 
   const stream = client.chat.completions
@@ -113,10 +113,10 @@ it(`ChatCompletionStream works`, async function () {
 it(`aborting ChatCompletionStream works`, async function () {
   const chunks: OpenAI.Chat.ChatCompletionChunk[] = [];
   const contents: [string, string][] = [];
-  const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [];
+  const messages: OpenAI.Chat.ChatCompletionMessage[] = [];
   const chatCompletions: OpenAI.Chat.ChatCompletion[] = [];
   let finalContent: string | undefined;
-  let finalMessage: OpenAI.Chat.ChatCompletionMessageParam | undefined;
+  let finalMessage: OpenAI.Chat.ChatCompletionMessage | undefined;
   let finalChatCompletion: OpenAI.Chat.ChatCompletion | undefined;
   let emittedError: any;
   let caughtError: any;
@@ -154,23 +154,29 @@ it(`aborting ChatCompletionStream works`, async function () {
   expect(contents.length).toBeGreaterThan(0);
 });
 
-it('handles builtinFile', async function () {
+it('handles formdata-node File', async function () {
   const file = await fetch(url)
     .then((x) => x.arrayBuffer())
-    .then(
-      (x) =>
-        new File(
-          [
-            // @ts-ignore array buffer can't be passed to File at the type-level
-            x,
-          ],
-          filename,
-        ),
-    );
+    .then((x) => new FormDataFile([x], filename));
 
-  const result = await client.audio.transcriptions.create({ file, model });
+  const params: TranscriptionCreateParams = { file, model };
+
+  const result = await client.audio.transcriptions.create(params);
   expect(result.text).toBeSimilarTo(correctAnswer, 12);
 });
+
+// @ts-ignore avoid DOM lib for testing purposes
+if (typeof File !== 'undefined') {
+  it('handles builtinFile', async function () {
+    const file = await fetch(url)
+      .then((x) => x.arrayBuffer())
+      // @ts-ignore avoid DOM lib for testing purposes
+      .then((x) => new File([x], filename));
+
+    const result = await client.audio.transcriptions.create({ file, model });
+    expect(result.text).toBeSimilarTo(correctAnswer, 12);
+  });
+}
 
 it('handles Response', async function () {
   const file = await fetch(url);
@@ -192,51 +198,62 @@ const fineTune = `{"prompt": "<prompt text>", "completion": "<ideal generated te
 describe('toFile', () => {
   it('handles form-data Blob', async function () {
     const result = await client.files.create({
-      file: await toFile(new FormDataBlob([new TextEncoder().encode(fineTune)]), 'finetune.jsonl'),
+      file: await toFile(
+        new FormDataBlob([
+          // @ts-ignore avoid DOM lib for testing purposes
+          new TextEncoder().encode(fineTune),
+        ]),
+        'finetune.jsonl',
+      ),
       purpose: 'fine-tune',
     });
-    expect(result.filename).toEqual('finetune.jsonl');
+    expect(result.status).toEqual('uploaded');
   });
+  // @ts-ignore avoid DOM lib for testing purposes
   if (typeof Blob !== 'undefined') {
     it('handles builtin Blob', async function () {
       const result = await client.files.create({
-        file: await toFile(new Blob([new TextEncoder().encode(fineTune)]), 'finetune.jsonl'),
+        file: await toFile(
+          // @ts-ignore avoid DOM lib for testing purposes
+          new Blob([new TextEncoder().encode(fineTune)]),
+          'finetune.jsonl',
+        ),
         purpose: 'fine-tune',
       });
-      expect(result.filename).toEqual('finetune.jsonl');
+      expect(result.status).toEqual('uploaded');
     });
   }
   it('handles Uint8Array', async function () {
     const result = await client.files.create({
-      file: await toFile(new TextEncoder().encode(fineTune), 'finetune.jsonl'),
+      file: await toFile(
+        // @ts-ignore avoid DOM lib for testing purposes
+        new TextEncoder().encode(fineTune),
+        'finetune.jsonl',
+      ),
       purpose: 'fine-tune',
     });
-    expect(result.filename).toEqual('finetune.jsonl');
+    expect(result.status).toEqual('uploaded');
   });
   it('handles ArrayBuffer', async function () {
     const result = await client.files.create({
-      file: await toFile(new TextEncoder().encode(fineTune).buffer, 'finetune.jsonl'),
+      file: await toFile(
+        // @ts-ignore avoid DOM lib for testing purposes
+        new TextEncoder().encode(fineTune).buffer,
+        'finetune.jsonl',
+      ),
       purpose: 'fine-tune',
     });
-    expect(result.filename).toEqual('finetune.jsonl');
+    expect(result.status).toEqual('uploaded');
   });
   it('handles DataView', async function () {
     const result = await client.files.create({
-      file: await toFile(new DataView(new TextEncoder().encode(fineTune).buffer), 'finetune.jsonl'),
+      file: await toFile(
+        // @ts-ignore avoid DOM lib for testing purposes
+        new DataView(new TextEncoder().encode(fineTune).buffer),
+        'finetune.jsonl',
+      ),
       purpose: 'fine-tune',
     });
-    expect(result.filename).toEqual('finetune.jsonl');
-  });
-  it('handles formdata-node File', async function () {
-    const file = await fetch(url)
-      .then((x) => x.arrayBuffer())
-      .then((x) => toFile(new FormDataFile([x], filename)));
-
-    expect(file.name).toEqual(filename);
-
-    const params: TranscriptionCreateParams = { file, model };
-
-    const result = await client.audio.transcriptions.create(params);
-    expect(result.text).toBeSimilarTo(correctAnswer, 12);
+    expect(result.status).toEqual('uploaded');
   });
 });

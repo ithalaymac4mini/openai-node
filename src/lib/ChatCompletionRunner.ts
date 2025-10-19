@@ -1,54 +1,53 @@
+import * as Core from 'openai/core';
 import {
+  type Completions,
+  type ChatCompletionMessage,
   type ChatCompletionMessageParam,
+  type ChatCompletionCreateParams,
   type ChatCompletionCreateParamsNonStreaming,
-} from '../resources/chat/completions';
-import { type BaseFunctionsArgs, RunnableTools } from './RunnableFunction';
+} from 'openai/resources/chat/completions';
+import { type RunnableFunctions, type BaseFunctionsArgs } from './RunnableFunction';
 import {
   AbstractChatCompletionRunner,
   AbstractChatCompletionRunnerEvents,
-  RunnerOptions,
 } from './AbstractChatCompletionRunner';
-import { isAssistantMessage } from './chatCompletionUtils';
-import OpenAI from '../index';
-import { AutoParseableTool } from '../lib/parser';
 
 export interface ChatCompletionRunnerEvents extends AbstractChatCompletionRunnerEvents {
   content: (content: string) => void;
 }
 
-export type ChatCompletionToolRunnerParams<FunctionsArgs extends BaseFunctionsArgs> = Omit<
+export type ChatCompletionFunctionRunnerParams<FunctionsArgs extends BaseFunctionsArgs> = Omit<
   ChatCompletionCreateParamsNonStreaming,
-  'tools'
+  'functions'
 > & {
-  tools: RunnableTools<FunctionsArgs> | AutoParseableTool<any, true>[];
+  functions: RunnableFunctions<FunctionsArgs>;
 };
 
-export class ChatCompletionRunner<ParsedT = null> extends AbstractChatCompletionRunner<
-  ChatCompletionRunnerEvents,
-  ParsedT
-> {
-  static runTools<ParsedT>(
-    client: OpenAI,
-    params: ChatCompletionToolRunnerParams<any[]>,
-    options?: RunnerOptions,
-  ): ChatCompletionRunner<ParsedT> {
-    const runner = new ChatCompletionRunner<ParsedT>();
-    const opts = {
-      ...options,
-      headers: { ...options?.headers, 'X-Stainless-Helper-Method': 'runTools' },
-    };
-    runner._run(() => runner._runTools(client, params, opts));
+export class ChatCompletionRunner extends AbstractChatCompletionRunner<ChatCompletionRunnerEvents> {
+  static runFunctions(
+    completions: Completions,
+    params: ChatCompletionFunctionRunnerParams<any[]>,
+    options?: Core.RequestOptions & { maxChatCompletions?: number },
+  ): ChatCompletionRunner {
+    const runner = new ChatCompletionRunner();
+    runner._run(() => runner._runFunctions(completions, params, options));
     return runner;
   }
 
-  override _addMessage(
-    this: ChatCompletionRunner<ParsedT>,
-    message: ChatCompletionMessageParam,
-    emit: boolean = true,
-  ) {
-    super._addMessage(message, emit);
-    if (isAssistantMessage(message) && message.content) {
-      this._emit('content', message.content as string);
+  static createChatCompletion(
+    completions: Completions,
+    params: ChatCompletionCreateParams,
+    options?: Core.RequestOptions,
+  ): ChatCompletionRunner {
+    const runner = new ChatCompletionRunner();
+    runner._run(() => runner._runChatCompletion(completions, params, options));
+    return runner;
+  }
+
+  override _addMessage(message: ChatCompletionMessage | ChatCompletionMessageParam) {
+    super._addMessage(message);
+    if (message.role === 'assistant' && message.content) {
+      this._emit('content', message.content);
     }
   }
 }
