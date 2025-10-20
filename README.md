@@ -20,6 +20,8 @@ yarn add openai
 
 The full API of this library can be found in [api.md file](https://github.com/openai/openai-node/blob/master/api.md). The code below shows how to get started using the chat completions API.
 
+To run this example, copy the code below into a file called `hello.js`.
+
 ```js
 import OpenAI from 'openai';
 
@@ -39,6 +41,37 @@ async function main() {
 main();
 ```
 
+<<<<<<< HEAD
+=======
+Go into the same directory as you installed the OpenAI Node package and then enter: `node hello.js`.
+
+## Streaming Responses
+
+We provide support for streaming responses using Server Sent Events (SSE).
+
+```ts
+import OpenAI from 'openai';
+
+const openai = new OpenAI();
+
+async function main() {
+  const stream = await openai.chat.completions.create({
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: 'Say this is a test' }],
+    stream: true,
+  });
+  for await (const part of stream) {
+    process.stdout.write(part.choices[0]?.delta?.content || '');
+  }
+}
+
+main();
+```
+
+If you need to cancel a stream, you can `break` from the loop
+or call `stream.controller.abort()`.
+
+>>>>>>> origin/dev/logan/add-code-to-run-example
 ### Request & Response types
 
 This library includes TypeScript definitions for all request params and response fields. You may import and use them like so:
