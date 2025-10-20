@@ -1,112 +1,87 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIResource } from '../../core/resource';
+import { APIResource } from '../../resource';
+import { isRequestOptions } from '../../core';
+import * as Core from '../../core';
 import * as Shared from '../shared';
 import * as MessagesAPI from './threads/messages';
 import * as ThreadsAPI from './threads/threads';
 import * as RunsAPI from './threads/runs/runs';
 import * as StepsAPI from './threads/runs/steps';
-import { APIPromise } from '../../core/api-promise';
-import { CursorPage, type CursorPageParams, PagePromise } from '../../core/pagination';
-import { buildHeaders } from '../../internal/headers';
-import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
+import { CursorPage, type CursorPageParams } from '../../pagination';
 import { AssistantStream } from '../../lib/AssistantStream';
 
 export class Assistants extends APIResource {
   /**
    * Create an assistant with a model and instructions.
-   *
-   * @example
-   * ```ts
-   * const assistant = await client.beta.assistants.create({
-   *   model: 'gpt-4o',
-   * });
-   * ```
    */
-  create(body: AssistantCreateParams, options?: RequestOptions): APIPromise<Assistant> {
+  create(body: AssistantCreateParams, options?: Core.RequestOptions): Core.APIPromise<Assistant> {
     return this._client.post('/assistants', {
       body,
       ...options,
-      headers: buildHeaders([{ 'OpenAI-Beta': 'assistants=v2' }, options?.headers]),
+      headers: { 'OpenAI-Beta': 'assistants=v2', ...options?.headers },
     });
   }
 
   /**
    * Retrieves an assistant.
-   *
-   * @example
-   * ```ts
-   * const assistant = await client.beta.assistants.retrieve(
-   *   'assistant_id',
-   * );
-   * ```
    */
-  retrieve(assistantID: string, options?: RequestOptions): APIPromise<Assistant> {
-    return this._client.get(path`/assistants/${assistantID}`, {
+  retrieve(assistantId: string, options?: Core.RequestOptions): Core.APIPromise<Assistant> {
+    return this._client.get(`/assistants/${assistantId}`, {
       ...options,
-      headers: buildHeaders([{ 'OpenAI-Beta': 'assistants=v2' }, options?.headers]),
+      headers: { 'OpenAI-Beta': 'assistants=v2', ...options?.headers },
     });
   }
 
   /**
    * Modifies an assistant.
-   *
-   * @example
-   * ```ts
-   * const assistant = await client.beta.assistants.update(
-   *   'assistant_id',
-   * );
-   * ```
    */
-  update(assistantID: string, body: AssistantUpdateParams, options?: RequestOptions): APIPromise<Assistant> {
-    return this._client.post(path`/assistants/${assistantID}`, {
+  update(
+    assistantId: string,
+    body: AssistantUpdateParams,
+    options?: Core.RequestOptions,
+  ): Core.APIPromise<Assistant> {
+    return this._client.post(`/assistants/${assistantId}`, {
       body,
       ...options,
-      headers: buildHeaders([{ 'OpenAI-Beta': 'assistants=v2' }, options?.headers]),
+      headers: { 'OpenAI-Beta': 'assistants=v2', ...options?.headers },
     });
   }
 
   /**
    * Returns a list of assistants.
-   *
-   * @example
-   * ```ts
-   * // Automatically fetches more pages as needed.
-   * for await (const assistant of client.beta.assistants.list()) {
-   *   // ...
-   * }
-   * ```
    */
   list(
-    query: AssistantListParams | null | undefined = {},
-    options?: RequestOptions,
-  ): PagePromise<AssistantsPage, Assistant> {
-    return this._client.getAPIList('/assistants', CursorPage<Assistant>, {
+    query?: AssistantListParams,
+    options?: Core.RequestOptions,
+  ): Core.PagePromise<AssistantsPage, Assistant>;
+  list(options?: Core.RequestOptions): Core.PagePromise<AssistantsPage, Assistant>;
+  list(
+    query: AssistantListParams | Core.RequestOptions = {},
+    options?: Core.RequestOptions,
+  ): Core.PagePromise<AssistantsPage, Assistant> {
+    if (isRequestOptions(query)) {
+      return this.list({}, query);
+    }
+    return this._client.getAPIList('/assistants', AssistantsPage, {
       query,
       ...options,
-      headers: buildHeaders([{ 'OpenAI-Beta': 'assistants=v2' }, options?.headers]),
+      headers: { 'OpenAI-Beta': 'assistants=v2', ...options?.headers },
     });
   }
 
   /**
    * Delete an assistant.
-   *
-   * @example
-   * ```ts
-   * const assistantDeleted =
-   *   await client.beta.assistants.delete('assistant_id');
-   * ```
    */
-  delete(assistantID: string, options?: RequestOptions): APIPromise<AssistantDeleted> {
-    return this._client.delete(path`/assistants/${assistantID}`, {
+  del(assistantId: string, options?: Core.RequestOptions): Core.APIPromise<AssistantDeleted> {
+    return this._client.delete(`/assistants/${assistantId}`, {
       ...options,
-      headers: buildHeaders([{ 'OpenAI-Beta': 'assistants=v2' }, options?.headers]),
+      headers: { 'OpenAI-Beta': 'assistants=v2', ...options?.headers },
     });
   }
 }
 
-export type AssistantsPage = CursorPage<Assistant>;
+export class AssistantsPage extends CursorPage<Assistant> {}
 
 /**
  * Represents an `assistant` that can call the model and use tools.
@@ -1158,14 +1133,12 @@ export interface AssistantCreateParams {
   name?: string | null;
 
   /**
+   * **o-series models only**
+   *
    * Constrains effort on reasoning for
    * [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
-   * supported values are `minimal`, `low`, `medium`, and `high`. Reducing reasoning
-   * effort can result in faster responses and fewer tokens used on reasoning in a
-   * response.
-   *
-   * Note: The `gpt-5-pro` model defaults to (and only supports) `high` reasoning
-   * effort.
+   * supported values are `low`, `medium`, and `high`. Reducing reasoning effort can
+   * result in faster responses and fewer tokens used on reasoning in a response.
    */
   reasoning_effort?: Shared.ReasoningEffort | null;
 
@@ -1365,12 +1338,6 @@ export interface AssistantUpdateParams {
    */
   model?:
     | (string & {})
-    | 'gpt-5'
-    | 'gpt-5-mini'
-    | 'gpt-5-nano'
-    | 'gpt-5-2025-08-07'
-    | 'gpt-5-mini-2025-08-07'
-    | 'gpt-5-nano-2025-08-07'
     | 'gpt-4.1'
     | 'gpt-4.1-mini'
     | 'gpt-4.1-nano'
@@ -1414,14 +1381,12 @@ export interface AssistantUpdateParams {
   name?: string | null;
 
   /**
+   * **o-series models only**
+   *
    * Constrains effort on reasoning for
    * [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently
-   * supported values are `minimal`, `low`, `medium`, and `high`. Reducing reasoning
-   * effort can result in faster responses and fewer tokens used on reasoning in a
-   * response.
-   *
-   * Note: The `gpt-5-pro` model defaults to (and only supports) `high` reasoning
-   * effort.
+   * supported values are `low`, `medium`, and `high`. Reducing reasoning effort can
+   * result in faster responses and fewer tokens used on reasoning in a response.
    */
   reasoning_effort?: Shared.ReasoningEffort | null;
 
@@ -1533,6 +1498,8 @@ export interface AssistantListParams extends CursorPageParams {
   order?: 'asc' | 'desc';
 }
 
+Assistants.AssistantsPage = AssistantsPage;
+
 export declare namespace Assistants {
   export {
     type Assistant as Assistant,
@@ -1546,7 +1513,7 @@ export declare namespace Assistants {
     type RunStepStreamEvent as RunStepStreamEvent,
     type RunStreamEvent as RunStreamEvent,
     type ThreadStreamEvent as ThreadStreamEvent,
-    type AssistantsPage as AssistantsPage,
+    AssistantsPage as AssistantsPage,
     type AssistantCreateParams as AssistantCreateParams,
     type AssistantUpdateParams as AssistantUpdateParams,
     type AssistantListParams as AssistantListParams,
